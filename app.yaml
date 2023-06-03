@@ -1,0 +1,21 @@
+runtime: php74
+
+handlers:
+- url: /
+  static_files: index.html
+  upload: index.html
+
+- url: /contacts.html
+  static_files: contacts.html
+  upload: contacts.html
+
+- url: /about.html
+  static_files: about.html
+  upload: about.html
+
+- url: /style.css
+  static_files: style.css
+  upload: style.css
+
+- url: /save_note.php
+  script: auto
