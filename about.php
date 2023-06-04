@@ -12,9 +12,9 @@
 </style>
     <nav>
         <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="about.html">О нас</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="index.php">Главная</a></li>
+            <li><a href="about.php">О нас</a></li>
+            <li><a href="contacts.php">Контакты</a></li>
         </ul>
     </nav>
  <div class="content">
