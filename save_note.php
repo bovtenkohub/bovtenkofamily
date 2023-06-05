@@ -1,12 +1,22 @@
 <?php
-if (isset($_POST['note'])) {
-    $note = $_POST['note'];
-    $filename = "notes.txt";
-    file_put_contents($filename, $note . PHP_EOL, FILE_APPEND);
-    echo "Заметка успешно сохранена!";
-} else {
-    echo "Ошибка: Заметка не была отправлена";
+// Ваши параметры подключения к базе данных
+$host = 'ec2-52-215-68-14.eu-west-1.compute.amazonaws.com';
+$db = 'dbce0gaajo02rr';
+$user = 'kgbqtbwigcivdu';
+$port = '5432';
+$pass = '137b1d5771bcbab90f163f6e8db96b6ed953ce910aa50ea707dd0643a8243c5f';
+$dsn = "pgsql:host=$host;port=$port;dbname=$db;user=$user;password=$pass";
 
+// Создание нового объекта PDO
+$pdo = new PDO($dsn);
 
-}
+// Получение заметки из формы (нужно заменить на реальный код получения данных из формы)
+$note = 'Тестовая заметка';
+
+// Вставка заметки в таблицу
+$sql = 'INSERT INTO notes (text) VALUES (:note)';
+$stmt= $pdo->prepare($sql);
+$stmt->bindValue(':note', $note);
+$stmt->execute();
+
 ?>
