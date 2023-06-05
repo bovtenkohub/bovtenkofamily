@@ -10,13 +10,12 @@ $dsn = "pgsql:host=$host;port=$port;dbname=$db;user=$user;password=$pass";
 // Создание нового объекта PDO
 $pdo = new PDO($dsn);
 
-// Получение заметки из формы (нужно заменить на реальный код получения данных из формы)
-$note = 'Тестовая заметка';
+// Получение заметки из формы
+$note = $_POST['note'];
 
 // Вставка заметки в таблицу
 $sql = 'INSERT INTO notes (text) VALUES (:note)';
 $stmt= $pdo->prepare($sql);
 $stmt->bindValue(':note', $note);
 $stmt->execute();
-
 ?>
