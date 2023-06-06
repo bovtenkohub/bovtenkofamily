@@ -6,3 +6,5 @@ function makeMove() {
     game.move(move);
     board.position(game.fen());
 }
+document.getElementById('play').addEventListener('click', makeMove);
+
