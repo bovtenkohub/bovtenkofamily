@@ -16,6 +16,10 @@ handlers:
 - url: /style.css
   static_files: style.css
   upload: style.css
+  
+  -url: /chessScript.js
+  stataic_files: chessScript.js
+  upload: chessScript.js
 
 - url: /save_note.php
   script: auto
