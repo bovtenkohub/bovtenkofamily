@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная страница</title>
     <link rel="stylesheet" href="style.css">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.2/chess.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard.js/1.0.0/chessboard.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/chessboard.js/1.0.0/chessboard.min.css" rel="stylesheet" />
 </head>
 <body>
     <nav>
@@ -25,6 +27,12 @@
             <button type="submit">Отправить заметку</button>
         </form>
     </div>
-
+    <div class="chessboard">
+        <h2>Введите ваш шахматный ход</h2>
+        <div id="board" style="width: 400px"></div>
+        <input type="text" id="moveInput">
+        <button onclick="makeMove()">Play</button>
+    </div>
+    <script src="chessScript.js"></script>
 </body>
 </html>
