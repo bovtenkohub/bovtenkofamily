@@ -82,4 +82,14 @@ nav a:hover {
 .notes button:hover {
     background-color: rgba(255, 255, 255, 0.9);
 }
+#board {
+    margin: 0 auto;
+}
+
+#fen {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+}
 
