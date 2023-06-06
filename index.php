@@ -28,9 +28,9 @@
             <button type="submit">Отправить заметку</button>
         </form>
     </div>
-    <div id="board" style="width: 400px"></div>
+    <div id="board" style="width: 400px; margin: 0 auto;"></div>
 
-    <textarea id="fen" rows="1" style="width: 400px"></textarea>
+    <textarea id="fen" rows="1" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;"></textarea>
     <button id="play">Play</button>
 
     <script src="chessScript.js"></script>
